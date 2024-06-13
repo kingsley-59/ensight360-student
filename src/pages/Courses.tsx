@@ -1,5 +1,4 @@
 import RegisteredCoursesTable from "@/components/data-tables/RegisteredCoursesTable";
-import StudentsTable from "@/components/data-tables/StudentsTable";
 import RegisterCourseDialog from "@/components/dialogs/RegisterCourseDialog";
 import { buttonVariants } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -75,18 +74,6 @@ function CourseSummaryTab({ course }: { course: Course }) {
     )
 }
 
-function StudentManagementTab() {
-
-    return (
-        <div className="w-full space-y-4">
-            <div className="space-y-2">
-                <CardTitle>Student Management</CardTitle>
-                <CardDescription>Manage the students enrolled in this course</CardDescription>
-            </div>
-            <StudentsTable />
-        </div>
-    )
-}
 
 export default function Courses() {
     const { currentDepartment } = useDepartmentState()
